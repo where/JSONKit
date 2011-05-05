@@ -2335,6 +2335,10 @@ exitNow:
   return(returnObject);
 }
 
+- (id)JSONValue {
+    return [self objectFromJSONString];
+}
+
 - (id)objectFromJSONString
 {
   return([self objectFromJSONStringWithParseOptions:JKParseOptionStrict error:NULL]);
